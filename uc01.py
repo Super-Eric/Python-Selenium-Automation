@@ -3,7 +3,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
  
-chromedriver="C:\\Users\\c.lapenta\\Documents\\chromedriver_win32\\chromedriver.exe"
+chromedriver="C:\\Users\\ZhouG2\\Downloads\\tools\\chromedriver.exe"
 os.environ["webdriver.chrome.driver"] = chromedriver
  
 class PythonOrgSearch(unittest.TestCase):
@@ -30,7 +30,7 @@ class PythonOrgSearch(unittest.TestCase):
        
         #<div class="hover">
         elems=driver.find_elements_by_class_name("hover")
-        print(elems[0].text)
+        print(elems[0].get_attribute('innerHTML'))
         #//*[@id="search-result-container"]/section/article[1]/a/header/div[2]
  
     def tearDown(self):
